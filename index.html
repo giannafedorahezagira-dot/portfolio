@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gianna Portfolio</title>
 <li><a href="#skills">Skills</a></li>
+<link rel="stylesheet" href="style.css">
 <style>
-
+html{
+  scroll-behavior: smooth;
+}
 /* RESET */
 *{
     margin:0;
@@ -245,29 +248,19 @@ body{
     font-size:12px;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-.nav-links a:focus,
-.nav-links a:hover{
-  color:#ff7a00;
-}
+
+
 .skills{
   display:flex;
   flex-direction:column;
-  align-items:center;   /* centers everything horizontally */
+  align-items:center;  
 }
 
 .skills h2{
   margin-bottom:20px;
 }
-html{
-  scroll-behavior: smooth;
-}
-.nav-links a:focus,
-.nav-links a:hover{
-  color:#ff7a00;
-}
+
+
 .portfolio{
   display:flex;
   flex-direction:column;
@@ -277,64 +270,50 @@ html{
 .portfolio h3{
   margin-bottom:20px;
 }
-html{
-  scroll-behavior: smooth;
-}
-.nav-links a:focus,
-.nav-links a:hover{
-  color:#ff7a00;
-}
-body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:black;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial;
 }
 
-h4{
-    margin-bottom:30px;
+.contact {
+  text-align: center;
+  padding: 50px;
 }
 
-form{
-    width:600px;
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 700px;
+  margin: auto;
 }
 
-.form-group{
-    display:flex;
-    gap:20px;          
-    margin-bottom:20px;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  background: #111;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
 
-input, select, textarea{
-    flex:1;
-    padding:10px;
-    background:black;
-    color:white;
-    border:1px solid gray;
+textarea {
+  grid-column: span 2;
+  height: 100px;
 }
 
-textarea{
-    height:120px;
+button {
+  grid-column: span 2;
+  width: 100px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
 }
-
-button{
-    padding:10px 25px;
-
-    background:black;
-    color:white;
-    border:1px solid white;
-    cursor:pointer;
-}
-
-button:hover{
-    background:white;
-    color:black;
-   
-}
-
 </style>
 </head>
 
@@ -404,17 +383,22 @@ button:hover{
 
         <div class="service-card">
             <h3>🌐 Web Development</h3>
-            <p>Build websites like portfolios, e-commerce, and business platforms.</p>
+            <p> create many types of websites such as personal portfolios,
+                 e-commerce sites, school systems, and business platforms..</p>
         </div>
 
         <div class="service-card">
             <h3>🎨 UI/UX Design</h3>
-            <p>Create modern user interfaces using Figma and design tools.</p>
+            <p>i can create user-friendly interfaces, 
+                wireframes, and prototypes using Figma
+                 to improve user experience and design quality.</p>
         </div>
 
         <div class="service-card">
             <h3>⚙️ Support</h3>
-            <p>Fix bugs, improve websites, and update content.</p>
+            <p>i can help user  Fixing simple website errors
+                 (debugging),Improving design and layout,Updating
+                  content on websites</p>
         </div>
 
     </div>
@@ -455,34 +439,33 @@ button:hover{
   <h3>Portfolio</h3>
 
   <div class="portfolio">
-    <img src="assets/zawa.png"  width="900" height="900"   alt="portfolio">
+    <img src="assets/zawa.png"  width="900"  alt="portfolio">
   </div>
 </section>
-<section class="contact">
-    <h2>Contact me</h2>
 
-    <form class="contact-form">
-        <div class="form-group">
-            
-<input type="text"  placeholder="Name">
-<input type="email"  placeholder="Email">
-</div>
 
-<div class="form-group">
-<input type="text" placeholder="Phone Number">
-<select>
-<option>Service Of Interest</option>
+<section id="contact" class="contact">
+      <h2>Contact me</h2>
+  <form class="contact-form">
+    
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
 
-</select>
-</div>
+    <input type="text" placeholder="Phone Number">
+    
+    <select>
+      <option>Service Of Interest</option>
+      <option>Web Development</option>
+      <option>UI/UX Design</option>
+    </select>
 
-<div class="form-group">
-<input type="text" placeholder="Timeline">
-<textarea placeholder="Project Details..."></textarea>
-</div>
+    <input type="text" placeholder="Timeline">
+    
+    <textarea placeholder="Project Details..."></textarea>
 
-<button>Send</button>
+    <button type="submit">Send</button>
+
+  </form>
 </section>
-</form>
 </body>
 </html>
