@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+
+<style>
+body {
+  background: linear-gradient(135deg, #08fccf, #b6eb92);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade in page */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+h1, h2, h3 {
+  color: #070606;
+}
+
+p {
+  color: #020202;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  animation: slideDown 1s ease;
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* NAV */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: rgb(255, 253, 253);
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ffcc;
+  transform: scale(1.1);
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.profile img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* TABLE */
+table {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100%;
+  background: rgb(160, 86, 86);
+  border-radius: 10px;
+}
+
+td, th {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+li {
+  color: teal;
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: translateX(10px);
+  color: #ff6b6b;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  color: #ff4757;
+  font-weight: bold;
+}
+
+/* CARD DESIGN */
+.card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  animation: fadeInUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Fade up */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: linear-gradient(45deg, #3498db, #6dd5fa);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #2980b9, #00c6ff);
+}
+
+/* INPUT */
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+    </style>
+</head>
+<body>
+   
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- 3 -->
+<h1 id="mainTitle">Welcome to My Dashboard</h1>
+<div class="profile">
+        <img src="assets/u.png">
+    </div>
+  <p>
+    Hello! I am a software development student passionate about building websites.
+    I enjoy learning HTML, CSS, and JavaScript to create interactive applications.
+    <span class="highlight">I love coding!</span>
+
+  </p>
+</div>
+
+
+<section id="about" class="card">
+  <h2>About</h2>
+  <p>This is my student dashboard project.</p>
+</section>
+
+<section id="skills" class="card">
+  <h2>Skills</h2>
+
+  <!-- 6 -->
+  <ul id="skillsList">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>GitHub</li>
+    <li>UI/UX</li>
+  </ul>
+
+  <!-- 7 -->
+  <h3>Learning Goals</h3>
+  <ol>
+    <li>Master JavaScript</li>
+    <li>Build real projects</li>
+    <li>Learn React</li>
+    <li>Understand backend</li>
+    <li>Get a job</li>
+  </ol>
+</section>
+
+<section id="contact" class="card">
+  <h2>Contact</h2>
+
+  <!-- 9 -->
+  <a href=https://www.instagram.com/gs_apacope/ target="_blank">Visit School Website</a>
+</section>
+
+<!-- 10 -->
+<h3>Course Table</h3>
+<table>
+<tr>
+  <th>Course</th>
+  <th>Instructor</th>
+  <th>Score</th>
+</tr>
+<tr><td>HTML</td><td>John</td><td>85</td></tr>
+<tr><td>CSS</td><td>Jane</td><td>78</td></tr>
+<tr><td>JS</td><td>Mike</td><td>90</td></tr>
+<tr><td>UX</td><td>Anna</td><td>88</td></tr>
+</table>
+
+<!-- Part D Buttons -->
+<h3>Interactivity</h3>
+<button onclick="changeBg()">Change Background</button>
+<button onclick="increaseFont()">Increase Font</button>
+<button onclick="resetFont()">Reset Font</button>
+
+<br><br>
+
+<input type="text" id="inputText">
+<button onclick="changeTitle()">Change Title</button>
+
+<br><br>
+
+<button onclick="showDate()">Show Date</button>
+<p id="date"></p>
+
+<button onclick="greet()">Greet</button>
+
+<br><br>
+
+<label><input type="checkbox" onchange="contrastMode()"> High Contrast</label>
+
+<br><br>
+
+<button onclick="increase()">+</button>
+<span id="counter">0</span>
+<button onclick="decrease()">-</button>
+
+<br><br>
+
+<button onclick="toggleSkills()">Toggle Skills</button>
+
+<!-- Part E -->
+<h3>Students</h3>
+<ul id="studentList"></ul>
+
+<h3>Grades</h3>
+<ul id="gradesList"></ul>
+
+<h3>Filtered Students (>70)</h3>
+<ul id="filteredList"></ul>
+
+<h3>Average Score</h3>
+<p id="average"></p>
+
+<h3>Courses Map</h3>
+<ul id="mapList"></ul>
+
+<!-- 51 -->
+<input type="text" id="newStudent">
+<button onclick="addStudent()">Add Student</button>
+
+</div>
+
+<script>
+// 29
+function changeBg() {
+  document.body.style.backgroundColor =
+    document.body.style.backgroundColor === "black" ? "#f4f6f9" : "black";
+}
+
+// 30
+let size = 18;
+function increaseFont() {
+  size += 2;
+  document.querySelectorAll("p").forEach(p => p.style.fontSize = size + "px");
+}
+
+// 31
+function resetFont() {
+  size = 18;
+  document.querySelectorAll("p").forEach(p => p.style.fontSize = size + "px");
+}
+
+// 32
+function changeTitle() {
+  document.getElementById("mainTitle").innerText =
+    document.getElementById("inputText").value;
+}
+
+// 33
+function showDate() {
+  document.getElementById("date").innerText = new Date();
+}
+
+// 34
+function greet() {
+  alert("Hello! Welcome to my dashboard");
+}
+
+// 35
+function contrastMode() {
+  document.body.style.color = "white";
+  document.body.style.backgroundColor = "black";
+}
+
+// 36
+let img = document.getElementById("profile");
+img.onmouseover = () => img.style.transform = "scale(1.2)";
+img.onmouseout = () => img.style.transform = "scale(1)";
+
+// 37
+let count = 0;
+function increase() {
+  count++;
+  document.getElementById("counter").innerText = count;
+}
+function decrease() {
+  count--;
+  document.getElementById("counter").innerText = count;
+}
+
+// 38
+function toggleSkills() {
+  let list = document.getElementById("skillsList");
+  list.style.display = list.style.display === "none" ? "block" : "none";
+}
+
+// 39
+let students = ["Anna", "John", "Mike", "Sara", "Paul"];
+console.log(students);
+
+// 40
+let list = document.getElementById("studentList");
+students.forEach(s => {
+  let li = document.createElement("li");
+  li.innerText = s;
+  list.appendChild(li);
+});
+
+// 41
+let numbers = [1,2,3];
+numbers.forEach(n => console.log(n*2));
+
+// 42
+let marks = [80,60,40];
+let grades = marks.map(m => m >= 80 ? "A" : m >= 60 ? "B" : "C");
+
+// 43
+let gradeList = document.getElementById("gradesList");
+grades.forEach(g => {
+  let li = document.createElement("li");
+  li.innerText = g;
+  gradeList.appendChild(li);
+});
+
+// 44
+let studentScores = [
+  {name:"Anna", score:80},
+  {name:"John", score:60},
+  {name:"Mike", score:90}
+];
+
+// 45
+studentScores.forEach(s => console.log(s));
+
+// 46
+let filtered = studentScores.filter(s => s.score > 70);
+let filteredList = document.getElementById("filteredList");
+filtered.forEach(s => {
+  let li = document.createElement("li");
+  li.innerText = s.name + " - " + s.score;
+  filteredList.appendChild(li);
+});
+
+// 47
+let total = studentScores.reduce((sum, s) => sum + s.score, 0);
+
+// 48
+document.getElementById("average").innerText = total / studentScores.length;
+
+// 49
+let map = new Map([
+  ["HTML","John"],
+  ["CSS","Jane"]
+]);
+
+// 50
+let mapList = document.getElementById("mapList");
+map.forEach((v,k) => {
+  let li = document.createElement("li");
+  li.innerText = k + " - " + v;
+  mapList.appendChild(li);
+});
+
+// 51
+function addStudent() {
+  let name = document.getElementById("newStudent").value;
+  students.push(name);
+
+  list.innerHTML = "";
+  students.forEach(s => {
+    let li = document.createElement("li");
+    li.innerText = s;
+    list.appendChild(li);
+  });
+}
+</script>
+</body>
+</html>
